@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR'; */
+
+/* common - s */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font: 16px/1.2 'Noto Sans KR', dotm, sans-serif;
+    letter-spacing: -0.5px;
+}
+.skip-nav a {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: -100px;
+}
+.skip-nav a:focus {
+    top: 0;
+}
+.inner {
+    width: 1320px;
+    margin: 0 auto;
+}
+.hide {
+    width: 0;
+    height: 0;
+    max-width: 1320px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    position: absolute;
+    left: -9999px;
+}
+/* coomon-E */
+
+
+/**********
+HEADER - S  
+***********/
+.header {
+    width: 100%;
+    min-width: 1320px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.logo {
+    float: left;
+    margin: 20px 200px 0 0;
+}
+.logo a {
+    display: block;
+    width: 105px;
+    height: 50px;
+    background-image: url(/cmoa-sub/img/logo.png);
+    text-indent: -9999px;
+}
+
+/* GNB - S */
+.gnb {
+    float: left;
+}
+.gnb > ul {}
+.gnb .depth1 {
+    float: left;
+}
+.gnb .depth1 > a {
+    display: block;
+    padding: 0 40px;
+    height: 90px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 90px;
+    color: #fff;
+}
+.gnb .depth2 {
+    display: none;
+    padding-top: 30px;
+    width: 100%;
+    height: 255px;
+    position: relative;
+    z-index: 10;
+}
+.gnb .depth2 li {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.gnb .depth2 li a {
+    font-size: 16px;
+    line-height: 26px;
+    color: #555;
+    transition: all 0.3s;
+}
+.gnb::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 285px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 90px;
+}
+.gnb:hover::after {
+    display: block;
+}
+/* .gnb .depth1:hover .depth2{display: block;} */
+.gnb:hover .depth2 {
+    display: block;
+}
+
+.gnb .depth1:hover .depth2 {
+    background-color: #eee;
+}
+.gnb .depth2 li a:hover {
+    font-weight: 500;
+    color: #000;
+}
+/* GNB - E */
+
+/* UTIL - S */
+.tnb {
+    float: right;
+}
+.tnb div > a {
+    display: block;
+    width: 20px;
+    height: 21px;
+    text-indent: -9999px;
+}
+.tnb div {
+    float: right;
+    margin: 35px 0 0 40px;
+}
+.tnb .tnb-menu a {
+    background-image: url(/cmoa-sub/img/menu.png);
+}
+.tnb .tnb-login a {
+    background-image: url(/cmoa-sub/img/login.png);
+}
+
+.sch {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    top: 90px;
+}
+.sch a {
+    width: 20px;
+    height: 22px;
+    position: absolute;
+    right: 120px;
+    top: -55px;
+    background-image: url(/cmoa-sub/img/sch.png);
+    text-indent: -9999px;
+}
+.sch .sch-form {
+    display: none;
+    width: 100%;
+    height: 810px;
+}
+.sch-all {
+    width: 100%;
+    height: 230px;
+    position: absolute;
+}
+.sch .sch-logo {
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    left: 93px;
+    bottom: 100px;
+    background-image: url(/cmoa-sub/img/sch-logo.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+.sch .sch-icon {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin: 100px 152px 0 0;
+    background-image: url(/cmoa-sub/img/sch-icon.png);
+    background-repeat: no-repeat;
+}
+.sch .sch-icon a {
+    text-indent: -9999px;
+}
+.sch-box {
+    width: 646px;
+    height: 90px;
+    border: 2px solid #111;
+    margin: 70px auto 0 auto;
+}
+.sch-box input {
+    float: left;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 35px 0 0 54px;
+    border: 0;
+}
+.sch-box .sch-but {
+    float: right;
+    margin-top: 25px;
+}
+.sch .sch-box button {
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+    padding: 0 30px;
+    margin-right: 30px;
+    background-color: #111;
+    border-radius: 6px;
+}
+.sch-form::before {
+    content: "";
+    width: 100%;
+    height: 230px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sch-box input::before {
+    content: "";
+    width: 14px;
+    height: 15px;
+    background-image: url(/cmoa-sub/img/sch-box-icon.png);
+}
+.sch .sch-form.active {
+    display: block;
+}
+/* UTIL - E */
+/**********
+HEADER - E  
+***********/
+
+
+
+/**********
+FOOTER - S  
+***********/
+.footer {
+    width: 100%;
+    min-width: 1320px;
+    height: 200px;
+    margin-top: 200px;
+    padding-top: 50px;
+    background-color: #111;
+}
+.footer .inner {
+    position: relative;
+}
+.footer .line::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 32px;
+    background-color: #222;
+}
+.footer .f-logo {
+    float: left;
+}
+.footer .f-logo a {
+    display: block;
+    width: 200px;
+    height: 21px;
+    margin-right: 20px;
+    background-image: url(/cmoa-sub/img/f-logo.png);
+    text-indent: -9999px;
+}
+.footer .f-add-box {
+    float: left;
+}
+.footer .f-menu li {
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+.footer .f-menu li + li {
+    margin-left: 21px;
+}
+.footer .f-menu li + li::before {
+    content: "";
+    width: 1px;
+    height: 11px;
+    position: absolute;
+    left: -10px;
+    bottom: 5px;
+    background-color: #333;
+}
+.footer .f-menu li a {
+    display: block;
+    font-size: 12px;
+    line-height: 21px;
+    color: #555;
+}
+.footer .f-copy {
+    float: left;
+    margin-top: 20px;
+}
+.f-copy .add {
+    float: left;
+    margin-bottom: 5px;
+}
+.f-copy address {
+    font-size: 14px;
+    line-height: 14px;
+    color: #777;
+}
+.f-copy .number {
+    float: right;
+    font-size: 14px;
+    line-height: 14px;
+    color: #555;
+    margin: 0 0 5px 10px;
+}
+.f-copy .copyright {
+    font-size: 14px;
+    line-height: 14px;
+    color: #555;
+}
+.f-sns {
+    float: right;
+}
+.f-sns li {
+    float: left;
+    margin-left: 5px;
+}
+.f-sns li a {
+    display: block;
+    width: 29px;
+    height: 22px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+.f-sns .you a {
+    background-image: url(/cmoa-sub/img/f-sns-icon1.png);
+}
+.f-sns .face a {
+    background-image: url(/cmoa-sub/img/f-sns-icon2.png);
+}
+.f-sns .ins a {
+    background-image: url(/cmoa-sub/img/f-sns-icon3.png);
+}
+.f-sns .blog a {
+    background-image: url(/cmoa-sub/img/f-sns-icon4.png);
+}
+/**********
+FOOTER - E  
+***********/
